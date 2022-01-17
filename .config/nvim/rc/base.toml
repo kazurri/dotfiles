@@ -1,0 +1,51 @@
+# colorscheme
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+hook_add = '''
+  autocmd MyAutoCmd VimEnter * nested colorscheme onedark
+'''
+
+[[plugins]]
+repo = 'cormacrelf/vim-colors-github'
+
+# lightline
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'mengelbrecht/lightline-bufferline'
+hook_add = '''
+  let g:lightline#bufferline#enable_devicons = 1
+  let g:lightline#bufferline#clickable = 1
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+depends = ['vim-devicons','lightline-bufferline']
+hook_add = '''
+  let g:lightline = {'colorscheme': 'one'}
+  let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
+  let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+  let g:lightline.component_raw = {'buffers': 1}
+  let g:lightline.component_type = {'buffers': 'tabsel'}
+'''
+
+# git
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# fzf
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = ['fzf']
+hook_add = '''
+  let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+'''
