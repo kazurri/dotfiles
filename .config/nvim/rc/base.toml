@@ -1,8 +1,12 @@
-# colorscheme
+# colorschemeG
 [[plugins]]
-repo = 'joshdick/onedark.vim'
+#repo = 'joshdick/onedark.vim'
+#hook_add = '''
+#  autocmd MyAutoCmd VimEnter * nested colorscheme onedark
+#'''
+repo = 'tomasr/molokai'
 hook_add = '''
-  autocmd MyAutoCmd VimEnter * nested colorscheme onedark
+  autocmd MyAutoCmd VimEnter * nested colorscheme molokai
 '''
 
 [[plugins]]
@@ -23,7 +27,7 @@ hook_add = '''
 repo = 'itchyny/lightline.vim'
 depends = ['vim-devicons','lightline-bufferline']
 hook_add = '''
-  let g:lightline = {'colorscheme': 'one'}
+  let g:lightline = {'colorscheme': 'molokai'}
   let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
   let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
   let g:lightline.component_raw = {'buffers': 1}
@@ -47,5 +51,5 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = ['fzf']
 hook_add = '''
-  let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+  let g:fzf_layout = {'window': {'width': 0.9, 'height': 0.9}}
 '''
