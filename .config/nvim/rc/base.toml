@@ -1,13 +1,12 @@
-# colorschemeG
+# colorscheme
 [[plugins]]
-#repo = 'joshdick/onedark.vim'
-#hook_add = '''
-#  autocmd MyAutoCmd VimEnter * nested colorscheme onedark
-#'''
 repo = 'tomasr/molokai'
 hook_add = '''
   autocmd MyAutoCmd VimEnter * nested colorscheme molokai
 '''
+
+[[plugins]]
+repo = 'joshdick/onedark.vim'
 
 [[plugins]]
 repo = 'cormacrelf/vim-colors-github'
@@ -28,10 +27,10 @@ repo = 'itchyny/lightline.vim'
 depends = ['vim-devicons','lightline-bufferline']
 hook_add = '''
   let g:lightline = {'colorscheme': 'molokai'}
-  let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
   let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
   let g:lightline.component_raw = {'buffers': 1}
   let g:lightline.component_type = {'buffers': 'tabsel'}
+  let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
 '''
 
 # git
@@ -51,5 +50,18 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = ['fzf']
 hook_add = '''
-  let g:fzf_layout = {'window': {'width': 0.9, 'height': 0.9}}
+  let g:fzf_colors = 
+  \ { 'fg':      ['fg', 'Normal'],
+    \ 'bg':      ['bg', 'Normal'],
+    \ 'hl':      ['fg', 'Comment'],
+    \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+    \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+    \ 'hl+':     ['fg', 'Statement'],
+    \ 'info':    ['fg', 'PreProc'],
+    \ 'prompt':  ['fg', 'Conditional'],
+    \ 'pointer': ['fg', 'Exception'],
+    \ 'marker':  ['fg', 'Keyword'],
+    \ 'spinner': ['fg', 'Label'],
+    \ 'header':  ['fg', 'Comment']}
+  let g:fzf_layout = {'window': {'width': 1.0, 'height': 0.5, 'relative': v:true}}
 '''
