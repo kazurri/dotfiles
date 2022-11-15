@@ -12,7 +12,7 @@ set -x PATH "$HOME/.cargo/bin" "$HOME/go/bin" $PATH
 set -x FZF_ALT_C_COMMAND "fd -HL -t d -E '.git/'"
 set -x FZF_CTRL_T_COMMAND "fd -HL -t f -E '.git/'"
 set -x FZF_DEFAULT_COMMAND "fd -HL -t f -E '.git/'"
-set -x FZF_DEFAULT_OPTS "--height 50% --layout=reverse --border"
+set -x FZF_DEFAULT_OPTS "--height 50% --layout=reverse --info=inline"
 
 # neovim
 set -x XDG_CACHE_HOME $HOME/.cache
