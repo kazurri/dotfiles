@@ -50,8 +50,9 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = ['fzf']
 hook_add = '''
-  let g:fzf_colors =
-  \ { 'fg':      ['fg', 'Normal'],
+  let g:fzf_action = {'enter': 'tab split'}
+  let g:fzf_colors = {
+    \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
     \ 'hl':      ['fg', 'Comment'],
     \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -63,5 +64,5 @@ hook_add = '''
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment']}
-  let g:fzf_layout = {'window': {'width': 1.0, 'height': 0.5, 'relative': v:true}}
+  let g:fzf_layout = {'window': '-tabnew'}
 '''
