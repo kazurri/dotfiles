@@ -12,12 +12,10 @@ end
 
 # bat
 if type -q bat
-  alias cat 'bat --paging never'
   alias less 'bat'
 end
 if type -q batcat
   alias bat 'batcat'
-  alias cat 'batcat --paging never'
   alias less 'batcat'
 end
 
@@ -33,7 +31,12 @@ end
 
 # ghq
 if type -q ghq
-  alias gf 'cd ( ghq list -p ( ghq list | fzf ) )'
+  function gf
+    set repo $(ghq list | fzf)
+    if test $status -eq 0
+      cd "$(ghq root)/$repo"
+    end
+  end
 end
 
 # neovim

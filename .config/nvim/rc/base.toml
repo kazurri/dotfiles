@@ -64,4 +64,5 @@ hook_add = '''
     \ 'marker':  ['fg', 'Keyword'],
     \ 'spinner': ['fg', 'Label'],
     \ 'header':  ['fg', 'Comment']}
+  let g:fzf_layout = {'window': '-tabnew'}
 '''
