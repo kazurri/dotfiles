@@ -1,6 +1,6 @@
-# lsd
-if type -q lsd
-  alias ls 'lsd'
+# exa
+if type -q exa
+  alias ls 'exa --color=always --icons --header --git'
 else
   switch (uname)
     case Linux
@@ -8,15 +8,6 @@ else
       alias ll 'ls -lF'
       alias lt 'ls -lrt'
   end
-end
-
-# bat
-if type -q bat
-  alias less 'bat'
-end
-if type -q batcat
-  alias bat 'batcat'
-  alias less 'batcat'
 end
 
 # delta
