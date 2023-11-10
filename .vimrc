@@ -16,8 +16,6 @@ set whichwrap=b,s,<,>,[,]
 set wrapscan
 set ignorecase
 set smartcase
-" color options
-set termguicolors
 
 " mappings
 nnoremap <C-w> :bd<CR>
@@ -25,4 +23,5 @@ nnoremap <C-q> :q<CR>
 vmap <LeftRelease> "*ygv
 
 " colorscheme
-colorscheme pablo
+" https://github.com/tomasr/molokai
+colorscheme molokai
