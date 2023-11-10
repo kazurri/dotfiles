@@ -57,8 +57,6 @@ set whichwrap=b,s,<,>,[,]
 set wrapscan
 set ignorecase
 set smartcase
-" color options
-set termguicolors
 
 " mappings
 let g:mapleader = "\<Space>"
