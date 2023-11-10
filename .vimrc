@@ -1,5 +1,6 @@
 " options
 set number
+set cursorline
 set hidden
 set showtabline=2
 set visualbell
