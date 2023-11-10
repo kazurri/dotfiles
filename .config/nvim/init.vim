@@ -40,19 +40,17 @@ filetype plugin indent on
 syntax enable
 
 " options
-set list
 set number
 set cursorline
 set hidden
 set showtabline=2
-set mouse=a
 set visualbell
 set t_vb=
 set clipboard+=unnamedplus
 set noswapfile
 " tab options
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 " search options
 set whichwrap=b,s,<,>,[,]
